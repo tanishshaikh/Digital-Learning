@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artificial Intelligence Quiz</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form div {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Artificial Intelligence Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Back to Quiz List</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Answer the following questions</h2>
+    <form id="ai-quiz-form">
+      <div>
+        <p>1. What does AI stand for?</p>
+        <label><input type="radio" name="q1" value="a"> Artificial Intelligence</label><br>
+        <label><input type="radio" name="q1" value="b"> Automatic Input</label><br>
+        <label><input type="radio" name="q1" value="c"> Autonomous Interface</label>
+      </div>
+      <div>
+        <p>2. Which is a subset of AI?</p>
+        <label><input type="radio" name="q2" value="a"> Machine Learning</label><br>
+        <label><input type="radio" name="q2" value="b"> SQL</label><br>
+        <label><input type="radio" name="q2" value="c"> HTML</label>
+      </div>
+      <div>
+        <p>3. What is Turing Test used for?</p>
+        <label><input type="radio" name="q3" value="a"> Measure machine's intelligence</label><br>
+        <label><input type="radio" name="q3" value="b"> Train models</label><br>
+        <label><input type="radio" name="q3" value="c"> Data normalization</label>
+      </div>
+      <div>
+        <p>4. Which technique is used in AI for decision making?</p>
+        <label><input type="radio" name="q4" value="a"> Decision Trees</label><br>
+        <label><input type="radio" name="q4" value="b"> Loops</label><br>
+        <label><input type="radio" name="q4" value="c"> Headers</label>
+      </div>
+      <div>
+        <p>5. What is NLP in AI?</p>
+        <label><input type="radio" name="q5" value="a"> Neural Language Processor</label><br>
+        <label><input type="radio" name="q5" value="b"> Natural Language Processing</label><br>
+        <label><input type="radio" name="q5" value="c"> Natural Learning Protocol</label>
+      </div>
+      <div>
+        <p>6. Which programming language is widely used in AI?</p>
+        <label><input type="radio" name="q6" value="a"> Python</label><br>
+        <label><input type="radio" name="q6" value="b"> HTML</label><br>
+        <label><input type="radio" name="q6" value="c"> CSS</label>
+      </div>
+      <div>
+        <p>7. What is deep learning?</p>
+        <label><input type="radio" name="q7" value="a"> Learning databases</label><br>
+        <label><input type="radio" name="q7" value="b"> Training deep decision trees</label><br>
+        <label><input type="radio" name="q7" value="c"> Using neural networks for learning</label>
+      </div>
+      <div>
+        <p>8. What is computer vision?</p>
+        <label><input type="radio" name="q8" value="a"> Making computers see like humans</label><br>
+        <label><input type="radio" name="q8" value="b"> Printing documents</label><br>
+        <label><input type="radio" name="q8" value="c"> Designing websites</label>
+      </div>
+      <div>
+        <p>9. What is an expert system?</p>
+        <label><input type="radio" name="q9" value="a"> Web browser plugin</label><br>
+        <label><input type="radio" name="q9" value="b"> Knowledge-based AI system</label><br>
+        <label><input type="radio" name="q9" value="c"> Search engine</label>
+      </div>
+      <div>
+        <p>10. What is the function of an AI agent?</p>
+        <label><input type="radio" name="q10" value="a"> Collect and act on data</label><br>
+        <label><input type="radio" name="q10" value="b"> Save HTML files</label><br>
+        <label><input type="radio" name="q10" value="c"> Encrypt passwords</label>
+      </div>
+
+      <div style="text-align:center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Digital Learning Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById('ai-quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Quiz submitted!");
+    });
+  </script>
+</body>
+</html>

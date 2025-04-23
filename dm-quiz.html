@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Marketing Quiz</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form div {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Digital Marketing Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Back to Quiz List</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Test your knowledge of Digital Marketing</h2>
+    <form id="dm-quiz-form">
+      <div>
+        <p>1. What does SEO stand for?</p>
+        <label><input type="radio" name="q1" value="a">Search Engine Optimization</label><br>
+        <label><input type="radio" name="q1" value="b">Search Email Option</label><br>
+        <label><input type="radio" name="q1" value="c">Standard Engine Operation</label>
+      </div>
+      <div>
+        <p>2. Which platform is best for B2B marketing?</p>
+        <label><input type="radio" name="q2" value="a">Facebook</label><br>
+        <label><input type="radio" name="q2" value="b">Instagram</label><br>
+        <label><input type="radio" name="q2" value="c">LinkedIn</label>
+      </div>
+      <div>
+        <p>3. What is PPC?</p>
+        <label><input type="radio" name="q3" value="a">Pay Per Click</label><br>
+        <label><input type="radio" name="q3" value="b">Page Performance Code</label><br>
+        <label><input type="radio" name="q3" value="c">Paid Promotion Campaign</label>
+      </div>
+      <div>
+        <p>4. Which tool helps track website traffic?</p>
+        <label><input type="radio" name="q4" value="a">Google Analytics</label><br>
+        <label><input type="radio" name="q4" value="b">Google Docs</label><br>
+        <label><input type="radio" name="q4" value="c">Google Drive</label>
+      </div>
+      <div>
+        <p>5. What is the goal of content marketing?</p>
+        <label><input type="radio" name="q5" value="a">Create ads</label><br>
+        <label><input type="radio" name="q5" value="b">Provide value and attract audience</label><br>
+        <label><input type="radio" name="q5" value="c">Increase prices</label>
+      </div>
+      <div>
+        <p>6. What is a landing page?</p>
+        <label><input type="radio" name="q6" value="a">Blog page</label><br>
+        <label><input type="radio" name="q6" value="b">Homepage</label><br>
+        <label><input type="radio" name="q6" value="c">Page where users land after clicking an ad</label>
+      </div>
+      <div>
+        <p>7. What is CTA in digital marketing?</p>
+        <label><input type="radio" name="q7" value="a">Click to Advertise</label><br>
+        <label><input type="radio" name="q7" value="b">Call to Action</label><br>
+        <label><input type="radio" name="q7" value="c">Cost to Acquire</label>
+      </div>
+      <div>
+        <p>8. What is keyword stuffing?</p>
+        <label><input type="radio" name="q8" value="a">Using too many irrelevant keywords</label><br>
+        <label><input type="radio" name="q8" value="b">Using correct keywords</label><br>
+        <label><input type="radio" name="q8" value="c">Avoiding keywords</label>
+      </div>
+      <div>
+        <p>9. What is an organic result?</p>
+        <label><input type="radio" name="q9" value="a">Paid search result</label><br>
+        <label><input type="radio" name="q9" value="b">Search result earned naturally</label><br>
+        <label><input type="radio" name="q9" value="c">Sponsored ad</label>
+      </div>
+      <div>
+        <p>10. What does CTR stand for?</p>
+        <label><input type="radio" name="q10" value="a">Click Through Rate</label><br>
+        <label><input type="radio" name="q10" value="b">Conversion Target Rate</label><br>
+        <label><input type="radio" name="q10" value="c">Cost to Reach</label>
+      </div>
+
+      <div style="text-align:center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Digital Learning Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById('dm-quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Quiz submitted!");
+    });
+  </script>
+</body>
+</html>

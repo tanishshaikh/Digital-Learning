@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Machine Learning Quiz</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form div {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Machine Learning Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Back to Quiz List</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Answer the following questions</h2>
+    <form id="ml-quiz-form">
+      <div>
+        <p>1. What is supervised learning?</p>
+        <label><input type="radio" name="q1" value="a"> Learning with labeled data</label><br>
+        <label><input type="radio" name="q1" value="b"> Learning without any data</label><br>
+        <label><input type="radio" name="q1" value="c"> Learning from video content</label>
+      </div>
+      <div>
+        <p>2. Which algorithm is used for classification?</p>
+        <label><input type="radio" name="q2" value="a"> K-Means</label><br>
+        <label><input type="radio" name="q2" value="b"> Decision Tree</label><br>
+        <label><input type="radio" name="q2" value="c"> PCA</label>
+      </div>
+      <div>
+        <p>3. What is overfitting?</p>
+        <label><input type="radio" name="q3" value="a"> When model performs poorly</label><br>
+        <label><input type="radio" name="q3" value="b"> When model fits noise</label><br>
+        <label><input type="radio" name="q3" value="c"> When model trains quickly</label>
+      </div>
+      <div>
+        <p>4. Which is not a ML algorithm?</p>
+        <label><input type="radio" name="q4" value="a"> Linear Regression</label><br>
+        <label><input type="radio" name="q4" value="b"> Logistic Regression</label><br>
+        <label><input type="radio" name="q4" value="c"> HTML</label>
+      </div>
+      <div>
+        <p>5. What is the main goal of ML?</p>
+        <label><input type="radio" name="q5" value="a"> Automate tasks</label><br>
+        <label><input type="radio" name="q5" value="b"> Clean data</label><br>
+        <label><input type="radio" name="q5" value="c"> Store data</label>
+      </div>
+      <div>
+        <p>6. What is a training set?</p>
+        <label><input type="radio" name="q6" value="a"> Unseen data</label><br>
+        <label><input type="radio" name="q6" value="b"> Labeled data used to train model</label><br>
+        <label><input type="radio" name="q6" value="c"> Data with errors</label>
+      </div>
+      <div>
+        <p>7. What is the output of a classification model?</p>
+        <label><input type="radio" name="q7" value="a"> A number</label><br>
+        <label><input type="radio" name="q7" value="b"> A category label</label><br>
+        <label><input type="radio" name="q7" value="c"> Text file</label>
+      </div>
+      <div>
+        <p>8. What is cross-validation used for?</p>
+        <label><input type="radio" name="q8" value="a"> Training only</label><br>
+        <label><input type="radio" name="q8" value="b"> Model evaluation</label><br>
+        <label><input type="radio" name="q8" value="c"> Data scraping</label>
+      </div>
+      <div>
+        <p>9. What is bias in ML?</p>
+        <label><input type="radio" name="q9" value="a"> Algorithm's error</label><br>
+        <label><input type="radio" name="q9" value="b"> Model assumption error</label><br>
+        <label><input type="radio" name="q9" value="c"> Noise in dataset</label>
+      </div>
+      <div>
+        <p>10. What is feature selection?</p>
+        <label><input type="radio" name="q10" value="a"> Choosing irrelevant columns</label><br>
+        <label><input type="radio" name="q10" value="b"> Picking important variables</label><br>
+        <label><input type="radio" name="q10" value="c"> Deleting rows</label>
+      </div>
+
+      <div style="text-align:center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Digital Learning Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById('ml-quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Quiz submitted!");
+    });
+  </script>
+</body>
+</html>

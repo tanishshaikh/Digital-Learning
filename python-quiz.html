@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Quiz</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form div {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Python Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Back to Quiz List</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Answer the following questions</h2>
+    <form id="python-quiz-form">
+      <div>
+        <p>1. What is Python?</p>
+        <label><input type="radio" name="q1" value="a"> Snake</label><br>
+        <label><input type="radio" name="q1" value="b"> Programming language</label><br>
+        <label><input type="radio" name="q1" value="c"> Web browser</label>
+      </div>
+      <div>
+        <p>2. Who created Python?</p>
+        <label><input type="radio" name="q2" value="a"> Elon Musk</label><br>
+        <label><input type="radio" name="q2" value="b"> Guido van Rossum</label><br>
+        <label><input type="radio" name="q2" value="c"> Bill Gates</label>
+      </div>
+      <div>
+        <p>3. Which keyword is used to define a function in Python?</p>
+        <label><input type="radio" name="q3" value="a"> define</label><br>
+        <label><input type="radio" name="q3" value="b"> function</label><br>
+        <label><input type="radio" name="q3" value="c"> def</label>
+      </div>
+      <div>
+        <p>4. What does the 'len()' function do?</p>
+        <label><input type="radio" name="q4" value="a"> Returns length</label><br>
+        <label><input type="radio" name="q4" value="b"> Adds numbers</label><br>
+        <label><input type="radio" name="q4" value="c"> Deletes variable</label>
+      </div>
+      <div>
+        <p>5. What is the correct file extension for Python files?</p>
+        <label><input type="radio" name="q5" value="a"> .py</label><br>
+        <label><input type="radio" name="q5" value="b"> .python</label><br>
+        <label><input type="radio" name="q5" value="c"> .pt</label>
+      </div>
+      <div>
+        <p>6. What is a list in Python?</p>
+        <label><input type="radio" name="q6" value="a"> Collection of items</label><br>
+        <label><input type="radio" name="q6" value="b"> A single number</label><br>
+        <label><input type="radio" name="q6" value="c"> A built-in string function</label>
+      </div>
+      <div>
+        <p>7. What symbol is used for comments in Python?</p>
+        <label><input type="radio" name="q7" value="a"> // </label><br>
+        <label><input type="radio" name="q7" value="b"> # </label><br>
+        <label><input type="radio" name="q7" value="c"> <!-- --> </label>
+      </div>
+      <div>
+        <p>8. Which data type is immutable in Python?</p>
+        <label><input type="radio" name="q8" value="a"> List</label><br>
+        <label><input type="radio" name="q8" value="b"> Dictionary</label><br>
+        <label><input type="radio" name="q8" value="c"> Tuple</label>
+      </div>
+      <div>
+        <p>9. Which keyword is used for a loop in Python?</p>
+        <label><input type="radio" name="q9" value="a"> repeat</label><br>
+        <label><input type="radio" name="q9" value="b"> for</label><br>
+        <label><input type="radio" name="q9" value="c"> loop</label>
+      </div>
+      <div>
+        <p>10. What will print("Hello"[1]) output?</p>
+        <label><input type="radio" name="q10" value="a"> H</label><br>
+        <label><input type="radio" name="q10" value="b"> e</label><br>
+        <label><input type="radio" name="q10" value="c"> o</label>
+      </div>
+
+      <div style="text-align:center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Digital Learning Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById('python-quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Quiz submitted!");
+    });
+  </script>
+</body>
+</html>

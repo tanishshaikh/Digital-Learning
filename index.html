@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Digital Learning Platform</title>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Light/Dark Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="floating-shapes">
+      <div class="shape circle"></div>
+      <div class="shape triangle"></div>
+      <div class="shape square"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to Digital Learning</h1>
+      <p>Interactive 3D Education Platform</p>
+      <button class="cta-btn" onclick="document.getElementById('courses').scrollIntoView({ behavior: 'smooth' })">Start Learning</button>
+    </div>
+    <!-- Optional Spline Embed -->
+    <!-- <iframe src="YOUR_VALID_SPLINE_URL" frameborder="0" class="spline-3d"></iframe> -->
+  </section>
+
+  <!-- Navigation -->
+  <header>
+    <h1>Digital Learning Platform</h1>
+    <p>Your gateway to the future of education</p>
+  </header>
+  <nav>
+    <a href="about.html" class="highlight">About</a>
+    <a href="dashboard.html" class="highlight">Dashboard</a>
+    <a href="contact.html" class="highlight">Contact Us</a>
+    <a href="quiz.html" class="highlight">Take Quiz</a>
+    <a href="certificate.html" class="highlight">Generate Certificate</a> <!-- ✅ New Button -->
+  </nav>    
+
+  <!-- Filter Bar -->
+  <section class="filter-bar">
+    <input type="text" id="search" placeholder="Search courses..." />
+    <div class="tags">
+      <button class="tag">All</button>
+      <button class="tag">Beginner</button>
+      <button class="tag">Intermediate</button>
+      <button class="tag">Advanced</button>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <h2 class="center-text">Our Courses</h2>
+    <div class="course-list">
+      <!-- Ordered Course Cards by Level -->
+      <div class="course-card beginner">
+        <h3>Python</h3>
+        <a href="https://www.youtube.com/watch?v=UrsmFxEIp5k&t=94s" target="_blank">
+          <img src="https://img.youtube.com/vi/UrsmFxEIp5k/0.jpg" alt="Python" />
+        </a>
+        <p>Start programming in Python — perfect for beginners and essential for data science.</p>
+      </div>
+
+      <div class="course-card beginner">
+        <h3>Web Development</h3>
+        <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" target="_blank">
+          <img src="https://img.youtube.com/vi/UB1O30fR-EE/0.jpg" alt="Web Dev" />
+        </a>
+        <p>Build responsive websites using HTML, CSS, JavaScript, and React.</p>
+      </div>
+
+      <div class="course-card intermediate">
+        <h3>SQL</h3>
+        <a href="https://www.youtube.com/watch?v=hlGoQC332VM" target="_blank">
+          <img src="https://img.youtube.com/vi/hlGoQC332VM/0.jpg" alt="SQL" />
+        </a>
+        <p>Learn SQL for managing and querying databases efficiently with hands-on examples.</p>
+      </div>
+
+      <div class="course-card intermediate">
+        <h3>Java</h3>
+        <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" target="_blank">
+          <img src="https://img.youtube.com/vi/eIrMbAQSU34/0.jpg" alt="Java" />
+        </a>
+        <p>Object-oriented programming and core Java concepts for backend or Android dev.</p>
+      </div>
+
+      <div class="course-card intermediate">
+        <h3>Digital Marketing</h3>
+        <a href="https://www.youtube.com/watch?v=XuUbLHIRyuM" target="_blank">
+          <img src="https://img.youtube.com/vi/XuUbLHIRyuM/0.jpg" alt="Marketing" />
+        </a>
+        <p>Master SEO, social media, and analytics to run effective online campaigns.</p>
+      </div>
+
+      <div class="course-card intermediate">
+        <h3>Cloud Computing</h3>
+        <a href="https://www.youtube.com/watch?v=2LaAJq1lB1Q" target="_blank">
+          <img src="https://img.youtube.com/vi/2LaAJq1lB1Q/0.jpg" alt="Cloud" />
+        </a>
+        <p>Learn AWS, Azure, and scalable app deployment on the cloud.</p>
+      </div>
+
+      <div class="course-card advanced">
+        <h3>Data Science</h3>
+        <a href="https://www.youtube.com/watch?v=ua-CiDNNj30" target="_blank">
+          <img src="https://img.youtube.com/vi/ua-CiDNNj30/0.jpg" alt="Data Science" />
+        </a>
+        <p>Explore statistics, data analysis and predictive models using Python.</p>
+      </div>
+
+      <div class="course-card advanced">
+        <h3>Machine Learning</h3>
+        <a href="https://www.youtube.com/watch?v=LvC68w9JS4Y&t=10170s" target="_blank">
+          <img src="https://img.youtube.com/vi/LvC68w9JS4Y/0.jpg" alt="ML" />
+        </a>
+        <p>Understand ML algorithms and build smart AI systems.</p>
+      </div>
+
+      <div class="course-card advanced">
+        <h3>Artificial Intelligence</h3>
+        <a href="https://www.youtube.com/watch?v=5NgNicANyqM" target="_blank">
+          <img src="https://img.youtube.com/vi/5NgNicANyqM/0.jpg" alt="AI" />
+        </a>
+        <p>AI, neural networks, and deep learning to shape the future.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="current-year"></span> Digital Learning Platform. All rights reserved.</p>
+    <p>Empowering learners to grow and succeed in the digital age.</p>
+    <p>
+      📧 <a href="mailto:support@digitallearning.com">support@digitallearning.com</a>
+      | 🌐 <a href="https://facebook.com" target="_blank">Facebook</a>
+      | 🐦 <a href="https://twitter.com" target="_blank">Twitter</a>
+      | 🔗 <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      | 📢 <a href="https://t.me/elearningsite" target="_blank">Telegram</a>
+    </p>
+    <p>📲 Join to get updates for internships and certificate courses</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

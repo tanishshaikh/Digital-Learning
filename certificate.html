@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      padding: 2rem;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .form-section, .certificate-section {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    }
+    input, select, button {
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      border: none;
+      width: 100%;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #certificate {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 40px auto;
+      border: 10px solid #004d99;
+      font-family: 'Georgia', serif;
+    }
+    .logo {
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    .signature {
+      height: 120px; /* Increased size */
+      margin-top: 1rem;
+    }
+    #certificate h1 {
+      font-size: 40px; /* Increased size */
+      color: #004d99;
+      margin-bottom: 20px;
+    }
+    #certificate h2 {
+      font-size: 32px; /* Increased size */
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 15px;
+    }
+    #certificate h3 {
+      font-size: 28px; /* Increased size */
+      font-style: italic;
+      color: #004d99;
+      margin-bottom: 20px;
+    }
+    #certificate p {
+      font-size: 20px; /* Increased size */
+      margin: 10px 0;
+    }
+    hr {
+      width: 60%;
+      margin: 20px auto;
+      border: 1px solid #004d99;
+    }
+    .certificate-id {
+      font-size: 18px;
+      color: #004d99;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Generate Your Certificate</h2>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <select id="course">
+        <option>Python Programming for Beginners</option>
+        <option>Full-Stack Web Development with HTML, CSS & JavaScript</option>
+        <option>Mastering SQL for Data Management and Analysis</option>
+        <option>Advanced Java Development and Object-Oriented Programming</option>
+        <option>Comprehensive Digital Marketing Strategies and Tools</option>
+        <option>Cloud Computing Essentials with AWS and Azure</option>
+        <option>Data Science with Python: From Basics to Advanced</option>
+        <option>Machine Learning and Predictive Analytics</option>
+        <option>Artificial Intelligence and Deep Learning Fundamentals</option>
+      </select>
+      <button onclick="generateCertificate()">Generate Certificate</button>
+    </div>
+
+    <div class="certificate-section" id="certificate">
+      <img src="https://github.com/tanishshaikh/E-Learning/blob/main/E%20learning%20Logo.jpg?raw=true" class="logo" alt="E-Learning Logo" />
+      <h1>Certificate of Completion</h1>
+      <hr />
+      <p>This is to proudly certify that</p>
+      <h2 id="certName">[Name]</h2>
+      <p>has successfully completed the professional certification course titled</p>
+      <h3 id="certCourse">[Course Name]</h3>
+      <p>in recognition of outstanding dedication and performance.</p>
+      <p>Awarded on <span id="certDate"><strong>[Date]</strong></span></p>
+      <div style="margin-top: 30px;">
+        <img src="https://github.com/tanishshaikh/E-Learning/blob/main/sig.jpg?raw=true" alt="Signature" class="signature" />
+        <p style="margin: 5px 0 0;">Director of Learning</p>
+      </div>
+      <p class="certificate-id" id="certId">Certificate ID: [ID]</p> <!-- Certificate ID location -->
+    </div>
+
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <script>
+    function generateCertificate() {
+      document.getElementById("certName").innerText = document.getElementById("name").value;
+      document.getElementById("certCourse").innerText = document.getElementById("course").value;
+      const today = new Date();
+      document.getElementById("certDate").innerText = today.toLocaleDateString();
+      
+      // Auto-generate Certificate ID (using current timestamp)
+      const certId = "CERT-" + today.getTime();
+      document.getElementById("certId").innerText = "Certificate ID: " + certId;
+    }
+
+    function downloadPDF() {
+      const element = document.getElementById("certificate");
+      html2pdf().from(element).save("certificate.pdf");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Science Quiz</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form div {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Science Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Back to Quiz List</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Test your knowledge of Data Science</h2>
+    <form id="ds-quiz-form">
+      <div>
+        <p>1. What is the first step in a data science project?</p>
+        <label><input type="radio" name="q1" value="a">Modeling</label><br>
+        <label><input type="radio" name="q1" value="b">Data Collection</label><br>
+        <label><input type="radio" name="q1" value="c">Deployment</label>
+      </div>
+      <div>
+        <p>2. What does EDA stand for?</p>
+        <label><input type="radio" name="q2" value="a">Enhanced Data Algorithm</label><br>
+        <label><input type="radio" name="q2" value="b">Exploratory Data Analysis</label><br>
+        <label><input type="radio" name="q2" value="c">Efficient Data Approach</label>
+      </div>
+      <div>
+        <p>3. Which library is used for data manipulation in Python?</p>
+        <label><input type="radio" name="q3" value="a">Matplotlib</label><br>
+        <label><input type="radio" name="q3" value="b">Pandas</label><br>
+        <label><input type="radio" name="q3" value="c">Seaborn</label>
+      </div>
+      <div>
+        <p>4. What is the purpose of a confusion matrix?</p>
+        <label><input type="radio" name="q4" value="a">Evaluate clustering</label><br>
+        <label><input type="radio" name="q4" value="b">Measure accuracy of classification</label><br>
+        <label><input type="radio" name="q4" value="c">Optimize model</label>
+      </div>
+      <div>
+        <p>5. What is data cleaning?</p>
+        <label><input type="radio" name="q5" value="a">Removing data</label><br>
+        <label><input type="radio" name="q5" value="b">Fixing or removing incorrect data</label><br>
+        <label><input type="radio" name="q5" value="c">Encrypting data</label>
+      </div>
+      <div>
+        <p>6. Which technique is used for dimensionality reduction?</p>
+        <label><input type="radio" name="q6" value="a">PCA</label><br>
+        <label><input type="radio" name="q6" value="b">KNN</label><br>
+        <label><input type="radio" name="q6" value="c">Naive Bayes</label>
+      </div>
+      <div>
+        <p>7. What is a feature in a dataset?</p>
+        <label><input type="radio" name="q7" value="a">An output variable</label><br>
+        <label><input type="radio" name="q7" value="b">A column or input variable</label><br>
+        <label><input type="radio" name="q7" value="c">A random value</label>
+      </div>
+      <div>
+        <p>8. What does overfitting mean?</p>
+        <label><input type="radio" name="q8" value="a">Model performs well on all data</label><br>
+        <label><input type="radio" name="q8" value="b">Model fits training data too well</label><br>
+        <label><input type="radio" name="q8" value="c">Model can't find patterns</label>
+      </div>
+      <div>
+        <p>9. What is the output of a regression model?</p>
+        <label><input type="radio" name="q9" value="a">Category label</label><br>
+        <label><input type="radio" name="q9" value="b">Binary value</label><br>
+        <label><input type="radio" name="q9" value="c">Continuous value</label>
+      </div>
+      <div>
+        <p>10. What is the use of a histogram?</p>
+        <label><input type="radio" name="q10" value="a">Show trend over time</label><br>
+        <label><input type="radio" name="q10" value="b">Show frequency distribution</label><br>
+        <label><input type="radio" name="q10" value="c">Show relationships</label>
+      </div>
+
+      <div style="text-align:center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Digital Learning Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById('ds-quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Quiz submitted!");
+    });
+  </script>
+</body>
+</html>
